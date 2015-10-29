@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="iphone6, iphone6 Plus, Macbook Pro, Macbook Air, 苹果, 苹果大叔">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <meta name="description" content="苹果大叔帮你买到更便宜的正品苹果设备">
+    <link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ static_url('css/page.css') }}">
+    <link rel="stylesheet" href="{{ static_url('css/sailfishSlider.css') }}">
+
+    <style type="text/css">
+        .panel .row{
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row;
+        }
+    </style>
+
+    <title>苹果大叔 - 正品苹果产品</title>
+</head>
+<body class="container">
+
+    {% block content %}
+    <div class="top-bar">
+        <span>&lt;</span>
+        <span>苹果大叔，更便宜的正品</span>
+        <span></span>
+    </div>
+
+    <div class="panel">
+        <div class="row">
+            <div class="col-4 card">
+                <div class="cover"><img src="{{ static_url('img/jenny.jpg') }}"/></div>
+            </div>
+            <div class="col-8 card productInfo">
+                <div class="title">西二旗总舵主</div>
+                <div class="price">jenny</div>
+                <div class="weixin">微信：</div>
+                <div class="qq">QQ：</div>
+                <div class="phone">电话：13910145298</div>
+            </div>
+        </div>
+    </div>
+
+    {% set meta = article.meta %}
+    <div class="panel">
+        <div class="row">
+            <div class="col-6 card">
+                <div class="cover">{{ article.abs }}</div>
+            </div>
+            <div class="col-6 card productInfo">
+                <div class="title">{{ meta.title }}</div>
+                <div class="price">{{ article.price }}</div>
+                <a class="buy">加入购物车</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel">
+        <div class="row productBody">
+            {{ article.body }}
+        </div>
+    </div>
+   
+    {% endblock %}
+
+
+    <script type="text/javascript">
+
+    </script>
+
+    {{ site_info.baidu_statistics }}
+
+</body>
+</html>

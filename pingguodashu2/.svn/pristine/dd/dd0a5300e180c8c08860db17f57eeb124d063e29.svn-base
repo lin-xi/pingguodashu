@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="iphone6, iphone6 Plus, Macbook Pro, Macbook Air, 苹果, 苹果大叔">
+    <meta name="description" content="苹果大叔帮你买到更便宜的正品苹果设备">
+    <link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/sailfishSlider.css">
+
+    <script src="cobra.js"></script>
+    <script src="sailfishSlider.js"></script>
+    <style type="text/css">
+    	#headslide{width: 100%; height: 100%;}
+    	.red{background-color: red}
+    	.blue{background-color: blue}
+    	.green{background-color: green}
+    </style>
+
+    <title>苹果大叔 - 正品苹果产品</title>
+</head>
+<body>
+
+<div id="headslide">
+    <div class="slide red"></div>
+    <div class="slide blue"></div>
+    <div class="slide green"></div>
+</div>
+
+<script type="text/javascript">
+	new SailfishSlider('#headslide');
+</script>
+
+</body>
+</html>

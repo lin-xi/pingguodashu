@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="iphone6, iphone6 Plus, Macbook Pro, Macbook Air, 苹果, 苹果娃">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <meta name="description" content="苹果娃帮你买到更便宜的正品苹果设备">
+    <link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ static_url('css/page.css') }}">
+    <link rel="stylesheet" href="{{ static_url('css/sailfishSlider.css') }}">
+
+    <title>苹果娃 - 正品苹果产品</title>
+</head>
+<body class="container" >
+
+    <div class="top-bar">
+        <span class="logo">
+            <img src="{{ static_url('img/logo.png') }}"/>
+        </span>
+        <span class="title">苹果娃，更便宜的正品</span>
+    </div>
+
+    <div id="slider">
+        <div>
+            <div class="slide">
+                <p class="ad-card">
+                    帮熟人买
+                </p>
+            </div>
+            <div class="slide">
+                <p class="ad-card">
+                    线下交易
+                </p>
+            </div>
+            <div class="slide">
+                <p class="ad-card">
+                    当然是正品
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    {% block content %}
+    <div class="panel">
+        <div class="row panel-head">
+            iphone
+        </div>
+        <div class="row article">
+        {% for article in iphone %}
+        {% set meta = article.meta %}
+
+            <div class="col-6 card">
+                <a href="/product/{{ article.aid }}">
+                <div class="cover">{{ article.abs }}</div>
+                <div class="title">{{ meta.title }}</div>
+                <div class="price">{{ article.price }}</div>
+                </a>
+            </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="panel">
+        <div class="row panel-head">
+            macbook
+        </div>
+        <div class="row article">
+        {% for article in macbook %}
+        {% set meta = article.meta %}
+
+            <div class="col-6 card">
+                <a href="/product/{{ article.aid }}">
+                <div class="cover">{{ article.abs }}</div>
+                <div class="title">{{ meta.title }}</div>
+                <div class="price">{{ article.price }}</div>
+                </a>
+            </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="panel">
+        <div class="row panel-head">
+            ipad
+        </div>
+        <div class="row article">
+        {% for article in ipad %}
+        {% set meta = article.meta %}
+
+            <div class="col-6 card">
+                <a href="/product/{{ article.aid }}">
+                <div class="cover">{{ article.abs }}</div>
+                <div class="title">{{ meta.title }}</div>
+                <div class="price">{{ article.price }}</div>
+                </a>
+            </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    <div class="footer">
+        <div class="row head">
+            <div class="col-3">关于我们</div>
+            <div class="col-3">购物指南</div>
+            <div class="col-3">售后服务</div>
+            <div class="col-3">推荐朋友</div>
+        </div>
+        <div class="row body">
+            <div class="col-3">
+                <p>苹果大叔</p>
+            </div>
+            <div class="col-3">
+                <p>购物流程</p>
+                <p>常见问题</p>
+                <p>联系客服</p>
+            </div>
+            <div class="col-3">
+                <p>售后政策</p>
+                <p>退款说明</p>
+                <p>返修/退换货</p>
+                <p>取消订单</p>
+            </div>
+            <div class="col-3">
+                <p>推荐朋友</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ static_url('js/sailfishSlider.js') }}"></script>
+    <script type="text/javascript">
+
+        var slide = new SailfishSlider('#slider');
+    </script>
+
+
+    {{ site_info.baidu_statistics }}
+
+</body>
+</html>

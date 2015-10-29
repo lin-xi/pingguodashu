@@ -1,0 +1,4 @@
+svn add --depth=infinity *
+svn ci -m "check in"
+
+cmd
